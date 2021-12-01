@@ -1,0 +1,20 @@
+list=[18,20,8,16,4,10,12,3]
+list.sort()
+print(list)
+x=len(list)
+#second largest element will be at x-1 position
+#list[p] where p=x-2
+p=x-2
+num=list[p]
+count=0
+while num!=0:
+    if num%2==0:
+        num=num/2
+        count=count+1
+    if num%2!=0:
+        num=num-1
+        count=count+1
+        num=num/2
+        count=count+1
+count=count-1
+print(count)
